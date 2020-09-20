@@ -20,9 +20,9 @@
             <nav class="main-nav">
                 <a href="" class="logo"><span class="logo-web">Web</span>Studio</a>
                 <ul class="site-nav">
-                    <li class="item"><a href="" class="link current">Студия</a></li>
-                    <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                    <li class="item"><a href="" class="link">Контакты</a></li>
+                    <li class="item"><a href="" class="logo-link link current">Студия</a></li>
+                    <li class="item"><a href="./portfolio.html" class="logo-link link">Портфолио</a></li>
+                    <li class="item"><a href="" class="logo-link link">Контакты</a></li>
                 </ul>
             
                 <ul class="auth-nav">
@@ -99,17 +99,20 @@
         <section class="section-works">
             <div class="container">
                     <h2 class="section-title">Чем мы занимаемся</h2>
-                        <ul class="works">
-                            <li class="item">
-                                <img src="./images/works1.jpg" alt="рабочее место программиста" width="370">
-                            </li>
-                            <li class="item">
-                                <img src="./images/works2.jpg" alt="веб-дизайнер разрабатывает приложения для смартфонов" width="370">
-                            </li>
-                            <li class="item">
-                                <img src="./images/works3.jpg" alt="работа веб-дизайнера с цветовой палитрой" width="370">
-                            </li>
-                        </ul>
+                    <ul class="works">
+                        <li class="item">
+                            <img src="./images/works1.jpg" alt="рабочее место программиста" width="370">
+                            <p class="works-overlay">Десктопные приложения</p>
+                        </li>
+                         <li class="item">
+                            <img src="./images/works2.jpg" alt="веб-дизайнер разрабатывает приложения для смартфонов" width="370">
+                            <p class="works-overlay">Мобильные приложени</p>
+                        </li>
+                         <li class="item">
+                            <img src="./images/works3.jpg" alt="работа веб-дизайнера с цветовой палитрой" width="370">
+                            <p class="works-overlay">Дизайнерские решения</p>
+                        </li>
+                    </ul>
             </div>
         </section>
 
@@ -378,10 +381,22 @@
                     </ul>
                                      
             </div>
-        </div>
-
-        
+        </div>        
     </footer>
+
+    <div class="backdrop">
+        <div class="modal">
+            <ul class="close-icon-list">
+                <li class="close-icon-item">
+                    <a href="" class="close-icon-link">
+                        <svg class="close-icon">
+                            <use href="./images/symbol-defs.svg#close-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
   
 </body>
 </html>
