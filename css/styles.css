@@ -62,7 +62,6 @@
         }
         
         .logo, .logo-footer, .logo-web {
-            
             font-family: "Raleway", sans-serif;
             font-weight: 700;
             font-size: 26px;
@@ -75,8 +74,7 @@
         }
                 
         /*Свойства site-nav*/
-
-                
+         
         .site-nav, .auth-nav {
             display: flex;
 
@@ -157,14 +155,15 @@
 
             color: var(--primary-text-color);
         }
-        .auth-link:hover .auth-icon{
+        .auth-link:hover .auth-icon,
+        .auth-link:focus .auth-icon {
             fill: var(--accent-color);
         }
-        .auth-link:hover {
+        .auth-link:hover,
+        .auth-link:focus {
             color: var(--accent-color);
         }
-        
-
+         
         .auth-icon {
             width: 10px;
             height: 16px;
@@ -612,10 +611,7 @@
             margin: 0;
             padding: 0;
         }
-        .close-icon-item {
-            
-        }
-
+        
         .close-icon-link {
             display: flex;
             justify-content: center;
@@ -702,24 +698,19 @@
             flex-wrap: wrap;
 
             list-style: none;
-
-            padding: 0;
-            margin: 0;
-            margin-left: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+           
         }
 
-        
-
         .project-item {
-            position: relative;
             width: 370px;
+            /*height: 404px;*/
             margin-right: 30px;
-            
             background: var(--withe-color);
             border: 1px solid #EEEEEE;                      
         }
-        
-        .project-item:nth-child(3n) {
+         .project-item:nth-child(3n) {
             margin-right: 0;
         }
 
@@ -728,8 +719,41 @@
         }
 
         
+        .project-link {
+            display: block;
+            list-style: none;
+            text-decoration: none;
 
-        .project .project-title {
+            padding: 0;
+            margin: 0;
+        }
+        .project-thumb {
+            position: relative;
+            overflow: hidden;
+            width: 370px;
+            height: 294px;          
+        }
+       
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 63px 24px;
+            height: 294px;
+            
+            font-size: 18px;
+            line-height: 1.56;
+            background: rgba(33, 150, 243, 0.9);
+            color: var(--withe-color);
+            opacity: 0;
+            transform: translateY(100%);
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-meta {
+            margin: 20px 24px;
+        }
+
+        .project-title {
             color: var(--title-text-color);
             font-weight: 700;
             font-size: 18px;
@@ -737,36 +761,30 @@
             letter-spacing: 0.06em;
 
             padding: 0;
-            margin: 0px 0px 4px 24px;
+            margin: 0px 0px 4px 0px;
         }
-        .project .project-text {
+        .project-text {
+            color: var(--primary-text-color);
             font-size: 16px;
             line-height: 1.87;
 
             padding: 0;
-            margin: 0px 0px 20px 24px;;
+            margin: 0;
         }
 
         .project-item:hover {
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+             1px 4px 6px rgba(0, 0, 0, 0.16);
         }
 
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            margin: 0;
-            padding: 63px 24px;
-            
-            font-size: 18px;
-            line-height: 1.56;
-            background: rgba(33, 150, 243, 0.9);
-            color: var(--withe-color);
-            opacity: 0;
-        }
-
+       
         .project-item:hover .project-overlay {
+            transform: translateY(0);
             opacity: 1;
         }
+
+        
 
 
         
