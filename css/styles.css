@@ -742,8 +742,13 @@
         .project-thumb {
             position: relative;
             overflow: hidden;
-            width: 370px;
-            height: 294px;          
+                     
+        }
+
+        .project-thumb img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
        
         .project-overlay {
@@ -784,14 +789,16 @@
             margin: 0;
         }
 
-        .project-item:hover {
+        .project-link:hover,
+        .project-link:focus {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
             0px 4px 4px rgba(0, 0, 0, 0.06),
              1px 4px 6px rgba(0, 0, 0, 0.16);
         }
 
        
-        .project-item:hover .project-overlay {
+        .project-link:hover .project-overlay,
+        .project-link:focus .project-overlay {
             transform: translateY(0);
             opacity: 1;
         }
